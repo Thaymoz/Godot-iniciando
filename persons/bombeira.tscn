@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddtgk0fqm0sp3"]
+
+[ext_resource type="Texture2D" uid="uid://p4wodlob75jm" path="res://icon.svg" id="1_67e31"]
+[ext_resource type="Script" path="res://scrpits/bombeira.gd" id="1_fq4ce"]
+
+[node name="bombeira" type="Node2D"]
+script = ExtResource("1_fq4ce")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_67e31")
