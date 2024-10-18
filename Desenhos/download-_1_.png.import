@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c30nhbmpn3nqf"
-path="res://.godot/imported/Bombeira N C.png-38f7bfb0ac2b4dff18c68dcd315b3c70.ctex"
+uid="uid://0ggkxfcq3jtq"
+path="res://.godot/imported/download-_1_.png-38cda9ee53b52934f90a92cd349acf04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personagens/Bombeira N C.png"
-dest_files=["res://.godot/imported/Bombeira N C.png-38f7bfb0ac2b4dff18c68dcd315b3c70.ctex"]
+source_file="res://Desenhos/download-_1_.png"
+dest_files=["res://.godot/imported/download-_1_.png-38cda9ee53b52934f90a92cd349acf04.ctex"]
 
 [params]
 

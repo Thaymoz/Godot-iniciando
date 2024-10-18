@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://d04o53hcukmgd"]
+
+[ext_resource type="Script" path="res://scrpits/rogerio.gd" id="1_45q26"]
+[ext_resource type="Texture2D" uid="uid://bkesi23uhhgsh" path="res://Desenhos/Exercício .png" id="1_f315j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vslx"]
+atlas = ExtResource("1_f315j")
+region = Rect2(0, 0, 1463, 2160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfjre"]
+atlas = ExtResource("1_f315j")
+region = Rect2(1994, 0, 1463, 2160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3shp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vslx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfjre")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vslx")
+}],
+"loop": false,
+"name": &"flexao",
+"speed": 7.0
+}]
+
+[node name="Rogerio" type="Node2D"]
+script = ExtResource("1_45q26")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g3shp")
+animation = &"flexao"
+frame = 2
+frame_progress = 1.0

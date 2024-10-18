@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxfvauhemo4yn"
-path="res://.godot/imported/Sem título5 2.png-aaa2a0c7dbed347b490de3b95c519e7d.ctex"
+uid="uid://bkesi23uhhgsh"
+path="res://.godot/imported/Exercício .png-e136dfee897bb3a1dc18df62d5ff5870.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Personagens/Sem título5 2.png"
-dest_files=["res://.godot/imported/Sem título5 2.png-aaa2a0c7dbed347b490de3b95c519e7d.ctex"]
+source_file="res://Desenhos/Exercício .png"
+dest_files=["res://.godot/imported/Exercício .png-e136dfee897bb3a1dc18df62d5ff5870.ctex"]
 
 [params]
 
