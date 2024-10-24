@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6l3is0oms3l4"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_1h085"]
+[ext_resource type="Texture2D" uid="uid://b1w5c2myvqtjr" path="res://Desenhos/Screenshot_2.png" id="1_kn5gu"]
+
+[sub_resource type="SystemFont" id="SystemFont_slyq7"]
+font_names = PackedStringArray("Comic Sans MS")
+msdf_pixel_range = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ishj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtyt7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27g3u"]
+bg_color = Color(0.552941, 0.0666667, 0.0156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.972549, 0.839216, 0.537255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsald"]
+bg_color = Color(0.972549, 0.839216, 0.537255, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.552941, 0.0666667, 0.0156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l7l5m"]
+bg_color = Color(0.552941, 0.0666667, 0.0156863, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.972549, 0.839216, 0.537255, 1)
+
+[sub_resource type="Theme" id="Theme_0hrn0"]
+Button/colors/font_color = Color(0.552941, 0.0666667, 0.0156863, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.972549, 0.839216, 0.537255, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 19
+Button/fonts/font = SubResource("SystemFont_slyq7")
+Button/styles/disabled = SubResource("StyleBoxFlat_3ishj")
+Button/styles/focus = SubResource("StyleBoxFlat_vtyt7")
+Button/styles/hover = SubResource("StyleBoxFlat_27g3u")
+Button/styles/normal = SubResource("StyleBoxFlat_dsald")
+Button/styles/pressed = SubResource("StyleBoxFlat_l7l5m")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1h085")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 458.0
+offset_bottom = 346.0
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_kn5gu")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 276.0
+offset_right = 526.0
+offset_bottom = 310.0
+theme = SubResource("Theme_0hrn0")
+text = "PLAY"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 351.0
+offset_right = 526.0
+offset_bottom = 385.0
+theme = SubResource("Theme_0hrn0")
+text = "QUIT"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

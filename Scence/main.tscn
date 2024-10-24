@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dx0w1x7psayp1"]
+
+[ext_resource type="Script" path="res://scrpits/main.gd" id="1_2qiwr"]
+[ext_resource type="Texture2D" uid="uid://yu65rq7w5hmd" path="res://Desenhos/Screenshot_3.png" id="2_fkq25"]
+[ext_resource type="Texture2D" uid="uid://bttab1m02pdth" path="res://Desenhos/Fundo.png" id="2_irt20"]
+[ext_resource type="PackedScene" uid="uid://dsa01mosr7pui" path="res://Prefarbs/bombeira.tscn" id="3_826bt"]
+[ext_resource type="PackedScene" uid="uid://d04o53hcukmgd" path="res://Prefarbs/rogerio.tscn" id="4_lal8a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5xia6"]
+font_size = 240
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_2qiwr")
+
+[node name="Screenshot3" type="Sprite2D" parent="."]
+position = Vector2(319, 240)
+scale = Vector2(1.38261, 1.38728)
+texture = ExtResource("2_fkq25")
+
+[node name="fundo aleatorio" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320.5, 239)
+scale = Vector2(0.992187, 0.995833)
+texture = ExtResource("2_irt20")
+
+[node name="Bombeira" parent="." instance=ExtResource("3_826bt")]
+position = Vector2(547, 372)
+scale = Vector2(0.13, 0.13)
+
+[node name="Rogerio" parent="." instance=ExtResource("4_lal8a")]
+position = Vector2(343, 424)
+scale = Vector2(0.13, 0.13)
+
+[node name="Label" type="Label" parent="Rogerio"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 153.846
+offset_top = -2707.69
+offset_right = 953.844
+offset_bottom = -2274.69
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_5xia6")
+horizontal_alignment = 1
+vertical_alignment = 1
