@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dx0w1x7psayp1"]
+[gd_scene load_steps=9 format=3 uid="uid://dx0w1x7psayp1"]
 
 [ext_resource type="Script" path="res://scrpits/main.gd" id="1_2qiwr"]
 [ext_resource type="Texture2D" uid="uid://yu65rq7w5hmd" path="res://Desenhos/Screenshot_3.png" id="2_fkq25"]
 [ext_resource type="Texture2D" uid="uid://bttab1m02pdth" path="res://Desenhos/Fundo.png" id="2_irt20"]
 [ext_resource type="PackedScene" uid="uid://dsa01mosr7pui" path="res://Prefarbs/bombeira.tscn" id="3_826bt"]
 [ext_resource type="PackedScene" uid="uid://d04o53hcukmgd" path="res://Prefarbs/rogerio.tscn" id="4_lal8a"]
+[ext_resource type="Script" path="res://new_script2.gd" id="6_egtr2"]
 [ext_resource type="Script" path="res://menu.gd" id="6_o8gvy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5xia6"]
@@ -52,6 +53,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
 offset_bottom = 484.0
+script = ExtResource("6_egtr2")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -71,9 +73,10 @@ theme_override_constants/separation = 25
 [node name="Button" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "Iniciar"
-script = ExtResource("6_o8gvy")
 
 [node name="Button2" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 text = "Sair"
 script = ExtResource("6_o8gvy")
+
+[connection signal="pressed" from="Control/VBoxContainer/Button" to="Control" method="_on_button_pressed"]
