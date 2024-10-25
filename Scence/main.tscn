@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=3 uid="uid://dx0w1x7psayp1"]
+[gd_scene load_steps=6 format=3 uid="uid://dx0w1x7psayp1"]
 
-[ext_resource type="Script" path="res://scrpits/main.gd" id="1_2qiwr"]
 [ext_resource type="Texture2D" uid="uid://yu65rq7w5hmd" path="res://Desenhos/Screenshot_3.png" id="2_fkq25"]
 [ext_resource type="Texture2D" uid="uid://bttab1m02pdth" path="res://Desenhos/Fundo.png" id="2_irt20"]
 [ext_resource type="PackedScene" uid="uid://dsa01mosr7pui" path="res://Prefarbs/bombeira.tscn" id="3_826bt"]
@@ -10,7 +9,6 @@
 font_size = 240
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_2qiwr")
 
 [node name="Screenshot3" type="Sprite2D" parent="."]
 position = Vector2(319, 240)

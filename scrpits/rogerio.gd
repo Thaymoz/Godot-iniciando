@@ -17,16 +17,16 @@ func _process(delta: float) -> void:
 		if time <= 0:
 			rodando = false
 			if clicks >= lv1:
-				print("parabens")
+				get_tree().change_scene_to_file("res://Scence/fases.tscn")
 			else:
 				print("srry")
 			clicks = 0
-	$Label.text = "Flexoes " + str(clicks) + "/10" + " Tempo: " + str(floor(time))
+	$Label.text = "Flexões " + str(clicks) + "/10" + " Tempo: " + str(floor(time))
 	
 func clicado():
 	if Input.is_action_just_pressed("space"):
 		clicks += 1
 		animation.play("flexao")
 		if clicks >= lv1:
-			print("parabens")
+			get_tree().change_scene_to_file("res://Scence/fases.tscn")
 			rodando = false
